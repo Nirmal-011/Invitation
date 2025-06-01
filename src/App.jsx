@@ -1,6 +1,6 @@
 import React from "react";
 import { Heart, MapPin, Calendar, Clock } from "lucide-react";
-import "./App.css"
+import "./App.css";
 
 function App() {
   const weddingDate = new Date("2025-08-17T10:30:00");
@@ -38,10 +38,10 @@ function App() {
             <Heart className="ornament-heart" size={24} />
             <div className="ornament-line"></div>
           </div>
-          
+
           <h1 className="couple-names">Siddiq & Rehana</h1>
-          <p className="subtitle">are getting married</p>
-          
+          <p className="subtitle">are beginning their story together</p>
+
           <div className="wedding-date">
             <Calendar className="date-icon" size={20} />
             <span>August 17, 2025</span>
@@ -64,9 +64,11 @@ function App() {
           <div className="story-content">
             <Heart className="story-heart" size={40} />
             <p className="story-text">
-              Once upon a time, two hearts met and created a bond that will last forever.
-              Through laughter and tears, adventures and quiet moments, we discovered that 
-              love isn't just a feeling—it's a promise to choose each other every single day.
+              Once upon a time, two souls were brought together by fate and
+              family, forming a bond destined to grow stronger each day. Through
+              shared moments, understanding, and mutual respect, we learned that
+              love is not just found—it's built, nurtured, and chosen with every
+              passing day.
             </p>
           </div>
         </div>
@@ -90,7 +92,11 @@ function App() {
             <div className="detail-card">
               <MapPin className="detail-icon" size={32} />
               <h3>Venue</h3>
-              <p>Aayesha Marriage Hall<br />Pettai, Tirunelveli</p>
+              <p>
+                Aayesha Marriage Hall
+                <br />
+                Pettai, Tirunelveli
+              </p>
             </div>
           </div>
         </div>
@@ -134,7 +140,7 @@ function App() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.243571949716!2d77.6415359!3d8.7631392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0416d81c4b1b81%3A0x21d1e58efb760e96!2sAysha%20Mahal%20tirunelveli!5e0!3m2!1sen!2sin!4v1748798990880!5m2!1sen!2sin"
               width="100%"
               height="400"
-              style={{ border: 0, borderRadius: '15px' }}
+              style={{ border: 0, borderRadius: "15px" }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
