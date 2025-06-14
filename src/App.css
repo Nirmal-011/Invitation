@@ -1,50 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@300;400;500&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&family=Lora:wght@300;400;500&family=Playfair+Display:wght@300;400;500&display=swap');
 
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+body {
   font-family: 'Lora', serif;
-  background: linear-gradient(135deg, #ffeef8 0%, #fff5f8 50%, #ffe8f1 100%);
-  color: #2c1810;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  line-height: 1.6;
+  color: #333;
 }
 
-.wedding-app {
+/* Common Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #8b4513;
   position: relative;
-  min-height: 100vh;
 }
 
 /* Floating Hearts Animation */
-.floating-hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.heart {
-  position: absolute;
-  color: rgba(220, 53, 69, 0.3);
-  animation: float 8s infinite ease-in-out;
-}
-
-.heart-1 { left: 10%; animation-delay: 0s; }
-.heart-2 { left: 20%; animation-delay: 1s; }
-.heart-3 { left: 30%; animation-delay: 2s; }
-.heart-4 { left: 40%; animation-delay: 3s; }
-.heart-5 { left: 60%; animation-delay: 4s; }
-.heart-6 { left: 70%; animation-delay: 5s; }
-.heart-7 { left: 80%; animation-delay: 6s; }
-.heart-8 { left: 90%; animation-delay: 7s; }
-
 @keyframes float {
   0%, 100% {
     transform: translateY(100vh) rotate(0deg);
@@ -59,11 +45,218 @@ body, html {
   }
 }
 
-/* Hero Section */
-.hero {
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-heart {
+  position: absolute;
+  color: rgba(220, 53, 69, 0.3);
+  animation: float 8s infinite ease-in-out;
+}
+
+.floating-hearts-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-heart-main {
+  position: absolute;
+  color: rgba(220, 53, 69, 0.3);
+  animation: float 8s infinite ease-in-out;
+}
+
+/* Login Page Styles */
+.login-container {
   min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(139,69,19,0.3)), 
-              url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?fit=crop&w=1400&q=80");
+  background: linear-gradient(135deg, #ffeef8 0%, #fff5f8 50%, #ffe8f1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  font-family: 'Lora', serif;
+}
+
+.login-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 107, 157, 0.2);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.divider-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.divider-line {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ff6b9d, transparent);
+  margin: 0 15px;
+}
+
+.heart-icon {
+  color: #ff6b9d;
+}
+
+.couple-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #8b4513, #ff6b9d, #8b4513);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+
+.invitation-subtitle {
+  color: #5a3e2b;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.login-form {
+  margin-bottom: 20px;
+}
+
+.password-field {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  display: block;
+}
+
+.lock-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.password-input {
+  width: 100%;
+  padding: 12px 45px 12px 45px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  font-family: 'Lora', serif;
+  cursor: text;
+}
+
+.password-input:focus {
+  border-color: #ff69b4;
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  z-index: 3;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff6b9d, #ffc1cc);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Lora', serif;
+  box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 107, 157, 0.4);
+}
+
+.login-hint {
+  text-align: center;
+}
+
+.login-hint p {
+  color: #5a3e2b;
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Wedding Content Styles */
+.wedding-content {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(139,69,19,0.3)), url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?fit=crop&w=1400&q=80");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -84,51 +277,54 @@ body, html {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
-.ornament {
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 107, 157, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 107, 157, 1);
+  transform: translateY(-2px);
+}
+
+.hero-divider {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px 0;
 }
 
-.ornament-line {
+.hero-divider-line {
   width: 80px;
   height: 1px;
   background: linear-gradient(to right, transparent, #fff, transparent);
   margin: 0 15px;
 }
 
-.ornament-heart {
+.hero-heart {
   color: #ff6b9d;
-  filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.5));
-  animation: heartbeat 2s infinite;
 }
 
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
-
-.couple-names {
+.hero-title {
   font-family: 'Great Vibes', cursive;
   font-size: 4rem;
   margin: 20px 0 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(45deg, #fff, #ff6b9d, #fff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s infinite;
 }
 
-@keyframes shimmer {
-  0%, 100% { background-position: -200% center; }
-  50% { background-position: 200% center; }
-}
-
-.subtitle {
+.hero-subtitle {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-weight: 300;
@@ -136,7 +332,7 @@ body, html {
   letter-spacing: 2px;
 }
 
-.wedding-date {
+.save-date {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,68 +345,28 @@ body, html {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.date-icon, .time-icon {
-  color: #ff6b9d;
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Section Styling */
-section {
+/* Love Story Section */
+.love-story-section {
   padding: 80px 0;
   position: relative;
   z-index: 2;
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #8b4513;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(to right, #ff6b9d, #ffc1cc, #ff6b9d);
-  margin: 15px auto;
-  border-radius: 2px;
-}
-
-/* Story Section */
-.story-section {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
 }
 
-.story-content {
+.love-story-content {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
 }
 
-.story-heart {
+.love-story-heart {
   color: #ff6b9d;
   margin-bottom: 30px;
-  animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
-}
-
-.story-text {
+.love-story-text {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #5a3e2b;
@@ -218,8 +374,11 @@ section {
   text-align-last: center;
 }
 
-/* Details Section */
-.details-section {
+/* Wedding Details Section */
+.wedding-details-section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 2;
   background: linear-gradient(135deg, #ffe8f1 0%, #ffeef8 100%);
 }
 
@@ -238,28 +397,10 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 107, 157, 0.2);
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.detail-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.detail-card:hover::before {
-  left: 100%;
 }
 
 .detail-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(255, 107, 157, 0.2);
+  transform: translateY(-5px);
 }
 
 .detail-icon {
@@ -267,14 +408,14 @@ section {
   margin-bottom: 20px;
 }
 
-.detail-card h3 {
+.detail-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   color: #8b4513;
   margin-bottom: 15px;
 }
 
-.detail-card p {
+.detail-text {
   font-size: 1.1rem;
   color: #5a3e2b;
   line-height: 1.6;
@@ -282,16 +423,15 @@ section {
 
 /* Countdown Section */
 .countdown-section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 2;
   background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
   color: white;
 }
 
-.countdown-section .section-title {
+.countdown-title {
   color: white;
-}
-
-.countdown-section .section-title::after {
-  background: linear-gradient(to right, #ff6b9d, #ffc1cc, #ff6b9d);
 }
 
 .countdown-timer {
@@ -303,7 +443,7 @@ section {
   margin-top: 50px;
 }
 
-.time-unit {
+.countdown-item {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -314,15 +454,14 @@ section {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.time-number {
+.countdown-number {
   display: block;
   font-size: 2.5rem;
   font-weight: bold;
   color: #ff6b9d;
-  text-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
 }
 
-.time-label {
+.countdown-label {
   display: block;
   font-size: 1rem;
   margin-top: 10px;
@@ -330,14 +469,17 @@ section {
   text-transform: uppercase;
 }
 
-.time-separator {
+.countdown-separator {
   font-size: 2rem;
   color: #ff6b9d;
   font-weight: bold;
 }
 
-/* Map Section */
-.map-section {
+/* Location Section */
+.location-section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 2;
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -365,17 +507,8 @@ section {
   margin-bottom: 20px;
 }
 
-.footer-hearts svg {
+.footer-heart {
   color: #ff6b9d;
-  animation: heartbeat 2s infinite;
-}
-
-.footer-hearts svg:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.footer-hearts svg:nth-child(3) {
-  animation-delay: 0.4s;
 }
 
 .footer-text {
@@ -389,34 +522,32 @@ section {
   font-family: 'Great Vibes', cursive;
   font-size: 2rem;
   color: #ff6b9d;
-  text-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
 }
 
-/* Mobile Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .couple-names {
+  .hero-title {
     font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
   
   .section-title {
     font-size: 2rem;
   }
   
-  .wedding-date {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
   .countdown-timer {
-    gap: 10px;
+    gap: 15px;
   }
   
-  .time-unit {
-    min-width: 80px;
+  .countdown-item {
+    min-width: 100px;
     padding: 20px 15px;
   }
   
-  .time-number {
+  .countdown-number {
     font-size: 2rem;
   }
   
@@ -425,8 +556,16 @@ section {
     gap: 20px;
   }
   
-  .hero-content {
-    margin: 20px;
-    padding: 30px 20px;
+  .love-story-text {
+    font-size: 1.1rem;
+  }
+  
+  .couple-names {
+    font-size: 2rem;
+  }
+  
+  .save-date {
+    font-size: 1rem;
+    padding: 12px 20px;
   }
 }
