@@ -43,10 +43,9 @@ function App() {
           <p className="subtitle">are beginning their story together</p>
 
           <div className="wedding-date">
-            <Calendar className="date-icon" size={20} />
-            <span>August 17, 2025</span>
-            <Clock className="time-icon" size={20} />
-            <span>10:30 AM</span>
+          
+            <span>Save the date - for a story written in stars and sealed with love</span>
+            
           </div>
 
           <div className="ornament bottom-ornament">
@@ -60,15 +59,14 @@ function App() {
       {/* Love Story Section */}
       <section className="story-section">
         <div className="container">
-          <h2 className="section-title">Our Love Story</h2>
+          <h2 className="section-title">Our Tale of Love </h2>
           <div className="story-content">
             <Heart className="story-heart" size={40} />
             <p className="story-text">
-              Once upon a time, two souls were brought together by fate and
-              family, forming a bond destined to grow stronger each day. Through
-              shared moments, understanding, and mutual respect, we learned that
-              love is not just found—it's built, nurtured, and chosen with every
-              passing day.
+              In a world full of little wonders, two hearts found each other through destiny.
+              With laughter in our steps and love in our souls, we followed the path that led us here.
+              Guided by family, friendship, and fate—we’re ready to begin our forever, hand in hand, with joy in every heartbeat.
+              Together, we begin our forever.
             </p>
           </div>
         </div>
