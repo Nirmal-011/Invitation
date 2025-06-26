@@ -17,7 +17,7 @@ const Login = () => {
     
     // Simulate login process
     if(password==='siddiq'){
-        navigate('/')
+        navigate('/invite')
         setIsLoading(false);
     }
     else{
