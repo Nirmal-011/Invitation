@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600&family=Great+Vibes&family=Playfair+Display:wght@300;400;500;600&display=swap');
+
+/* Keyframe Animations */
+@keyframes floatLogin {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+  25% { transform: translateY(-20px) rotate(5deg); opacity: 0.4; }
+  50% { transform: translateY(-40px) rotate(-5deg); opacity: 0.6; }
+  75% { transform: translateY(-20px) rotate(3deg); opacity: 0.4; }
+}
+
+@keyframes heartbeatLogin {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes shimmerLogin {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatDecoration {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.15; }
+  25% { transform: translateY(-15px) rotate(3deg); opacity: 0.25; }
+  50% { transform: translateY(-30px) rotate(-3deg); opacity: 0.35; }
+  75% { transform: translateY(-15px) rotate(2deg); opacity: 0.25; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Main Container */
+.login-container {
+  font-family: 'Lora', serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffeef8 0%, #fff5f8 50%, #ffe8f1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Floating Hearts */
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-heart {
+  position: absolute;
+  color: rgba(220, 53, 69, 0.2);
+  animation: floatLogin 12s infinite ease-in-out;
+}
+
+.floating-heart:nth-child(1) { left: 5%; animation-delay: 0s; }
+.floating-heart:nth-child(2) { left: 13%; animation-delay: 1s; }
+.floating-heart:nth-child(3) { left: 21%; animation-delay: 2s; }
+.floating-heart:nth-child(4) { left: 29%; animation-delay: 3s; }
+.floating-heart:nth-child(5) { left: 37%; animation-delay: 4s; }
+.floating-heart:nth-child(6) { left: 45%; animation-delay: 5s; }
+.floating-heart:nth-child(7) { left: 53%; animation-delay: 6s; }
+.floating-heart:nth-child(8) { left: 61%; animation-delay: 7s; }
+.floating-heart:nth-child(9) { left: 69%; animation-delay: 8s; }
+.floating-heart:nth-child(10) { left: 77%; animation-delay: 9s; }
+.floating-heart:nth-child(11) { left: 85%; animation-delay: 10s; }
+.floating-heart:nth-child(12) { left: 93%; animation-delay: 11s; }
+
+/* Login Wrapper */
+.login-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Login Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 107, 157, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 
+              0 0 0 1px rgba(255, 255, 255, 0.5), 
+              inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.decoration-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ff6b9d, transparent);
+  margin: 0 15px;
+}
+
+.header-heart {
+  color: #ff6b9d;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.3));
+  animation: heartbeatLogin 2s infinite;
+}
+
+.header-heart-small {
+  color: #ff6b9d;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.3));
+  animation: heartbeatLogin 2s infinite;
+}
+
+.welcome-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #8b4513;
+  margin: 15px 0 10px;
+  background: linear-gradient(45deg, #8b4513, #ff6b9d, #8b4513);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerLogin 3s infinite;
+}
+
+.welcome-subtitle {
+  font-family: 'Playfair Display', serif;
+  color: #5a3e2b;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Form */
+.login-form {
+  margin-bottom: 30px;
+}
+
+.password-field {
+  margin-bottom: 25px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: #ff6b9d;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.password-input {
+  width: 100%;
+  padding: 15px 15px 15px 50px;
+  border: 2px solid rgba(255, 107, 157, 0.2);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #2c1810;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.password-input:focus {
+  border-color: rgba(255, 107, 157, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+}
+
+.toggle-password-btn {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #ff6b9d;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.toggle-password-btn:hover {
+  background: rgba(255, 107, 157, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff6b9d 0%, #ec95a5 50%, #ff6b9d 100%);
+  border: none;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight:800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 157, 0.4);
+}
+
+.loading-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Footer */
+.login-footer {
+  text-align: center;
+}
+
+.footer-hearts {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.footer-heart-1 {
+  color: #ff6b9d;
+  animation: heartbeatLogin 2s infinite;
+}
+
+.footer-heart-2 {
+  color: #ff6b9d;
+  animation: heartbeatLogin 2s infinite 0.3s;
+}
+
+.footer-heart-3 {
+  color: #ff6b9d;
+  animation: heartbeatLogin 2s infinite 0.6s;
+}
+
+/* Side Decorations */
+.left-decoration {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.right-decoration {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decoration-container {
+  height: 100%;
+  position: relative;
+}
+
+.decoration-heart {
+  position: absolute;
+  color: rgba(255, 107, 157, 0.15);
+  animation: floatDecoration 8s infinite ease-in-out;
+}
+
+.left-decoration .decoration-heart:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.left-decoration .decoration-heart:nth-child(2) { top: 25%; left: 60%; animation-delay: 1s; }
+.left-decoration .decoration-heart:nth-child(3) { top: 40%; left: 20%; animation-delay: 2s; }
+.left-decoration .decoration-heart:nth-child(4) { top: 55%; left: 60%; animation-delay: 3s; }
+.left-decoration .decoration-heart:nth-child(5) { top: 70%; left: 20%; animation-delay: 4s; }
+.left-decoration .decoration-heart:nth-child(6) { top: 85%; left: 60%; animation-delay: 5s; }
+
+.right-decoration .decoration-heart:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.right-decoration .decoration-heart:nth-child(2) { top: 25%; left: 60%; animation-delay: 1s; }
+.right-decoration .decoration-heart:nth-child(3) { top: 40%; left: 20%; animation-delay: 2s; }
+.right-decoration .decoration-heart:nth-child(4) { top: 55%; left: 60%; animation-delay: 3s; }
+.right-decoration .decoration-heart:nth-child(5) { top: 70%; left: 20%; animation-delay: 4s; }
+.right-decoration .decoration-heart:nth-child(6) { top: 85%; left: 60%; animation-delay: 5s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 15px;
+  }
+  
+  .login-card {
+    padding: 30px 25px;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+  }
+  
+  .left-decoration,
+  .right-decoration {
+    display: none;
+  }
+}
