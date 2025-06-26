@@ -21,7 +21,7 @@ const Login = () => {
         setIsLoading(false);
     }
     else{
-        setError("Please Enter the Correct Password");
+        setError("Contact Couple For Password");
         setIsLoading(false)
     }
   };
