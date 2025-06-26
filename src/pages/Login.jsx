@@ -56,9 +56,9 @@ const Login = () => {
               <div className="decoration-line"></div>
             </div>
             
-            <h1 className="welcome-title">Welcome</h1>
+            <h1 className="welcome-title">Siddiq & Rehana</h1>
             
-            <p className="welcome-subtitle">Enter password to continue</p>
+            <p className="welcome-subtitle">Private Invitaion</p>
             
             <div className="header-decoration">
               <div className="decoration-line"></div>
